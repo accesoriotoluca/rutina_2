@@ -1,0 +1,37 @@
+<!-- 
+* ESTOS SON ARCHIVOS CREADOS ATRAVES DE UN MODULO DE PYTHON 'TEMPLATE ENGINE'
+. permiten ejecutar lógica
+. el navegador/frontend recibe otro html ya procesado
+. diccionario_titulo puede tambien ser una consulta de base de datos
+
+. TEMPLATE INHERITANCE: interfaz q puede ser heredada/reutilizada en otras interfaces
+. especificar en este archivo donde va a ir el contenido que ya tenian las otras páginas
+
+. BLOCK: decirle que en esta seccion habra mas contenido y así la pagina que lo herede podra insertar en esa parte su contenido
+
+. <li><a href="/ruta_acerca_de">INICIO</a></li> no se puede quedar así por que facilmente puede cambiar la url, identificacion para no crear conflicto...
+. solo hasta crear CSS estableció <title>título</title> 
+. especificamos antes de debe load static, jinja link ruta archivo css-->
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/main.css' %}">
+
+<nav class="nav"><ul>
+
+    <li><a href="{% url 'inicio' %}">INICIO</a></li>
+
+    <li><a href="{% url 'cuerpo' %}">PARTES DEL CUERPO</a></li>
+    <li><a href="{% url 'ejercicio' %}">EJERCICIOS</a></li>
+
+    <li><a href="{% url 'f_cuerpo' %}">AGREGAR PARTE DEL CUERPO</a></li>
+    <li><a href="{% url 'f_ejercicio' %}">AGREGAR EJERCICIO</a></li>
+
+</ul></nav>
+    
+<main class="main">
+
+    {% block main %}
+    {% endblock %}
+
+</main>

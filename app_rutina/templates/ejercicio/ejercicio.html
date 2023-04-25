@@ -1,0 +1,23 @@
+
+{% extends 'main/main.html' %}
+
+{% block main %}
+
+    <div>
+
+        <h1>EJERCICIOS:</h1>
+
+        {% for i in f_ejercicio %}
+
+            <ul class="ejercicio">
+
+                <li> PARTE DEL CUERPO: {{ i.cuerpo.cuerpo }} </li>
+                <li> EJERCICIO: {{ i.ejercicio }} </li>
+
+            </ul>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<!-- 
+* ESTOS SON ARCHIVOS CREADOS ATRAVES DE UN MODULO DE PYTHON 'TEMPLATE ENGINE'
+. permiten ejecutar lógica
+. el navegador/frontend recibe otro html ya procesado
+. diccionario_titulo puede tambien ser una consulta de base de datos
+. TEMPLATE INHERITANCE: interfaz q puede ser heredada/reutilizada en otras interfaces
+. EXTENDS: parámetro nombre archivo
+. BLOCK: decirle que en esta seccion habra mas contenido y así la pagina que lo herede podra insertar en esa parte su contenido
+
+. contenido dinámico: consulta base de datos genera html envia a cliente y puede ir cambiando, contenido que servidor cambia dinámicamente
+. css es contenido estático por que no necesita ser pre-procesado por el servidor, siempre va a ser el mismo contenido, audios, imagenes, videos, pdf, etc.
+. {.% load static %} necesito especificar que carge los archivos estáticos, despues del xtends pero antes del block -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends 'main/main.html' %}
+
+    {% load static %}
+
+    {% block main %}
+
+        <div>
+
+            <h1> EJERCICIOS X LA MAÑANA </h1>
+
+            <h2>Lista de ejercicios y estiramientos, que haré por la mañana y las partes del cuerpo que trabajan, repeticiones, y posiciones</h2>
+
+            <img src="{% static 'espalda.jpg' %}" alt="" width="800">
+            
+        </div>
+
+    {% endblock %}
+    
+</body>
+</html>

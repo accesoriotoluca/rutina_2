@@ -1,0 +1,129 @@
+
+body {
+    background: #202020;
+    color: white;
+}
+
+.nav {
+    background: rgb(5, 119, 148);
+    margin-top: 7px;
+    padding: 10px;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav ul li a {
+    background-color: rgb(5, 119, 148);
+    color: black;
+    font-family: Segoe UI;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 10px 86.5px;
+}
+.nav ul li a:hover {
+    background-color: #202020;
+    color: white;
+}
+
+
+.main div {
+    text-align: center;
+}
+.main div h1 {
+    font-size: 40px;
+    background: #3a3a3a;
+    margin: 20px 20px 20px;
+    padding: 35px;
+}
+.main div h2 {
+    background: #3a3a3a;
+    margin: 0px 20px 10px;
+    padding: 25px;
+}
+.main img {
+    padding: 10px;
+}
+
+.cuerpo {
+    background: rgb(57, 112, 184);
+    color: #202020;
+    font-family: Verdana;
+    font-size: 60px;
+    padding: 45px;
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.cuerpo:hover {
+    background: #202020;
+    color: white;
+}
+
+
+.ejercicio {
+    display: flex;
+    justify-content: flex-start;
+}
+.ejercicio li {
+    margin: 0px -200px 15px 410px;
+    font-family: Courier New;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+
+.cuerpo_d {
+    display: flex;
+    justify-content: space-around;
+}
+.cuerpo_d li {
+    margin: 0px 0px 10px 100px;
+    font-family: Courier New;
+    font-style: italic;
+    font-size: x-large;
+}
+
+
+.form {
+    background: rgb(166, 196, 224);
+    color: black;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: Courier New;
+    font-size: xx-large;
+    display: block;
+    padding: 20px;
+}
+
+/*
+* CREAMOS ESTE ARCHIVO DENTRO DE STATIC 
+. body {} solo afecta etiquetas body en archivo html donde tenga la referencia
+. la ref va desde este archivo css, al base html con jinja load static/ static 'main/css.css', y como es la base afecta a los html referenciados en base
+. body no se puede asignar clase/identificador, debe incluirse en link CSS
+body{ background: #202020; color: whitesmoke; }
+
+.nombre establece clase en etiqueta específica y aplica sin afectar otra seccion
+. padding: relleno agregar o quitar
+.navbar{ background: #404040; }
+
+referencia global, afecta específico 'ul: crear lista'
+.navbar ul{ display: flex; justify-content: space-between; }
+
+referencia global, afecta específico, x herarquia 'ul li: define elemento lista'
+. list-style: quita bullet points en este caso
+.navbar ul li{ list-style: none; }
+
+referencia global, afecta específico, x herarquia 'ul li a: link'
+.navbar ul li a { color: white; text-decoration: none; }
+
+referencia global, afecta específico, x herarquia 'ul li a: link'.
+:hover: (junto a etiqueta) estilo aplique pasar mouse/ diferentes acciones a usar
+.navbar ul li a :hover{ color: aquamarine; }
+
+.container{ max-width: 1200px; padding: 15px 15px; margin: auto; }
+
+.card{ background: whitesmoke; color: black; padding: 10px; margin-bottom: 5px; }
+
+.input{ background: wheat; padding: 10px; text-align: center; display: block; }*/

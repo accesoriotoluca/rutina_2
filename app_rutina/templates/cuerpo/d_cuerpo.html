@@ -1,0 +1,28 @@
+
+{% extends 'main/main.html' %}
+
+{% block main %}
+
+    <div>
+
+        <h1>EJERCICIOS DE: {{ d_cuerpo.cuerpo }} </h1>
+        <!-- aqui me da un elemento si no huvo 404 y le pido que me de una valor de ese elmento que es nombre -->
+
+        {% for i in d_ejercicio %}
+
+            <!-- aqui itera en los elementos filtrados por un parámetro y los muestra -->
+
+            <ul class="cuerpo_d">
+
+                <li> TIPO: {{ i.tipo }} </li>
+                <li> EJERCICIO: {{ i.ejercicio }} </li>
+                <li> REPETICIONES: {{ i.repeticiones }} </li>
+                <li> POSICIÓN: {{ i.posicion }} </li>
+
+            </ul>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

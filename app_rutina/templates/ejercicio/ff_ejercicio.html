@@ -1,0 +1,28 @@
+<!-- 
+. cuando llamamos formularios de esta forma tienen una propiedad que se puede llamar ejemplo: as_p (para guardarlo en etiquetas p)
+. si form action="": el formulario envía los datos atraves de un diccionario query/consulta a la ruta actual (view_funcion_crear_tarea), como no se establece 'acción' los enviar atraves de un metodo GET y esos datos los puede tener backend
+. metodo GET: cuando un formulario envía los datos los enviar atraves de la URL 'el formulario esta intentando de obtener datos' y al obtenerlos envia los parámetros al backend puede extraer
+
+csrf_token: poder verificar que	el formulario ha sido generado por nuestro propio servidor de id que django añade a los formularios para que no copien tu sitio	y luego traten de enviar datos desde otro lugar-->
+
+{% extends 'main/main.html' %}
+
+{% block main %}
+
+    <div>
+
+        <h1>AGREGAR EJERCICIO:</h1>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ ff_ejercicio.as_p}}
+
+            <button>GUARDAR</button>
+            
+        </form>
+
+    </div>
+
+{% endblock %}

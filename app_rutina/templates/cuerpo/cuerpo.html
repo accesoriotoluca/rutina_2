@@ -1,0 +1,56 @@
+<!-- 
+* RELACIÓN: CSS, MODELOS (REFERENCIA), VIEWS (VARIANTES O CLAVES DE DICCIONARIOS)
+
+* JINJA LOOPS: {.% for x in array %} {.% endfor %}
+. para recorrer datos de una lista de lementos
+. {.{}} 'variable tag' es para mostrar en el navegados {.%%} 'block tag' es para lógica (funcionan dentro de comentarios por eso puso el punto y sin espacios solo dentro)
+. pueden contener cualquier elemento html
+
+* JINJA CONDITIONS: 
+{.% if %} {.% else %} {.% endif %}
+
+* ETIQUETA DIV:
+crear contenedores o secciones dentro de una página web para organizar y estructurar el contenido
+
+* ETIQUETA ARTICLE:
+definir sección independiente, puede ser considerada entidad autónoma y puede incluir un encabezado, texto, imágenes, videos u otros elementos.
+
+* a href="":
+crear enlace a otra página web o a un elemento dentro de la misma página, href especifica la URL
+
+* NAV:
+definir una sección de navegación en la página, agrupa/estructura enlaces de navegación
+
+* UL:
+crear lista no ordenada de elementos ejem: lista de enlaces de navegación.
+
+* LI:
+define cada elemento de la lista. ejem: definir cada enlace de navegación.
+
+* SECUENCIA EJEMPLO:
+crear un DIV > luego A > luego botones
+
+* {# comentario jinja que solo se ve en el backend #}
+comentario html que se ve en el navegador -->
+
+{% extends 'main/main.html' %}
+
+{% block main %}
+
+    <div>
+
+        <h1>PARTES DEL CUERPO:</h1>
+
+        <!-- primero es el url y despues el 2do parámetro es id pero no nombre_id, será que id es una propiedad que se puede usar en esta sintaxis a diferencia de filter -->
+
+        {% for i in f_cuerpo %}
+
+          <!-- aqui se llena el link con la ruta detalle + id en turno de iteración (serían como vistas automáticas, ya que se hizo una vista y va cambiando el contenido x database) -->
+
+          <a href="{% url 'd_cuerpo' i.id %}" ><p class="cuerpo" > {{ i.cuerpo }} </p></a>
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
