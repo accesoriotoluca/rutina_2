@@ -1,34 +1,7 @@
 """
-git add .
-git commit -m ''
-git push origin m
-
-? VSCODE:
-F1 : lista de opciones en vscode
-'select interpreter' : establecer la terminal con el entorno virtual
-
--------------------------------
-
-? TERMINAL:
-'cls' : limpiar consola
-
--------------------------------
-
-? VIRTUALENV:
-'pip install virtualenv'
-'virtualenv entorno_virtual' : CREAR ENTORNO (ESTO CREA UNA CARPETA)
-".\entorno_virtual\Scripts\activate" : 'ACTIVAR ENTORNO
-
--------------------------------
-
-? DJANGO:
-'django-admin startproject nombre_proyecto_django .' : CREAR PROYECTO DJANGO ( ' .' AL FINAL HACE QUE NO CREE DOBLE CARPETA)
-'__pycache__' : la carpeta guarda código que ya compilo python para que se ejecute mas rápido
-
 ? DJANGO ADMIN:
 python manage.py createsuperuser
 i44k3112
-
 
 -------------------------------
 
@@ -65,52 +38,10 @@ ORM? en cada cambio, vuelve a ejecutar todo el proyecto automaticamente
 
 -------------------------------
 
-? CARPETAS:
-si las carpetas que tiene un nombre reservado vscode las identifica?, o almenos la carpeta templeates tiene un nombre reservado // olvidalo si no tiene el nombre predeterminado django no la reconoce
-
-? PROYECTO GLOBAL Y APLICACIONES
-'python manage.py startapp carpeta_aplicacion_1' : crea carpeta de applicacion interna del proyecto global
-    carpeta_proyecto_django : administra 'proyecto global'
-    carpeta_aplicacion_1 : administra una parte del 'proyecto global'
-
-? MIGRATIONS:
-SE MODIFICA AUTOMATICAMENTE al llenar datos en la base de datos
-django no requiere consultas SQL x modulo ORM base de datos interactua atraves de código de python
-
--------------------------------
-
-? ORGANIGRAMA:
-¿que otros pasos faltan?
-¿en django como se le llama a este proceso? ¿existen otros metodos de trabajo?
-
-? INSTALACIÓN DE HERRAMIENTAS:
-. creamos un entorno virtual: virtualenv 'nombre' y lo activamos: .\'nombre'\Scripts\activate
-. instalamos django en entorno: pip install django
-
-? PROYECTO Y APP:
-. creamos un proyecto con: django-admin startproject 'nombre' '.' para que no cree otra carpeta
-. en proyecto creamos una app: python manage.py startapp 'nombre'
-. en proyecto en archivo settings agregamos nombre de app a la lista de apps
-
-? MODELOS:
-. en app en archivo models creamos modelos y establecemos, clase, tipo de dato y relación
-. migramos los datos de los modelos: python manage.py makemigrations 'app' 
-. ejecutamos las migraciones: python manage.py migrate 'app'
-
-? VIEWS:
-. en app en archivo views creamos función para enviar contenido al navegador
-. en app en archivo views creamos diccionario que relaciona los modelos y el archivo html
-
-? TEMPLATES:
-. en app creamos carpeta templates y archivo templete.html con etiquetas button, a, div, etc.
-. en app en templates en archivo templete creamos jinja loop/conditionals para mostrar elementos de los modelos
-
-? TEMPLETES BASE/NAVEGACIÓN:
-. en app creamos carpeta diseños y archivo base y creamos con etiquetas nav,ul,li,a una navegación y con el metodo block/endblock de jinja referenciamos donde estará el contenido de archivo templete
-. en app en templates en archivo templete usamos el método extends de jinja para referenciar la navegacion de archivo base y agregamos block/endblock para referenciar donde estara el contenido
 
 ? FORMULARIOS:
 . an app creamos archivo formularios, donde creamos la clase para ingresar datos desde la clase forms de django, y lo referenciamos en en archivo templete, usando etiqueta form com method POST, y agregamos metodo csrf_token de jinja
+
 . en app en views en la función agregamos una condicional if si el request method es igual a get renderizamos el contenido, de lo contrario se crearía un nuevo objeto en el modelo con los datos del input delformulario y con metodo redirect se redirecciona a la lista de proyectos
 
 ? ESTÁTICOS Y CSS
@@ -133,9 +64,7 @@ django no requiere consultas SQL x modulo ORM base de datos interactua atraves d
 """
 
 """ 
-* SE INSTALLA UNA EXTENCION APARTE:
-    pip install django-crispy-forms
-    pip install crispy-bootstrap4
+
 
 * NUEVO CONTEXTO PARA AGREGAR DICCIONARIOS EN UNA VARIABLE:
     context = {'form': forms.UniuversityForm }
