@@ -39,33 +39,6 @@ ORM? en cada cambio, vuelve a ejecutar todo el proyecto automaticamente
 -------------------------------
 
 
-? FORMULARIOS:
-. an app creamos archivo formularios, donde creamos la clase para ingresar datos desde la clase forms de django, y lo referenciamos en en archivo templete, usando etiqueta form com method POST, y agregamos metodo csrf_token de jinja
-
-. en app en views en la función agregamos una condicional if si el request method es igual a get renderizamos el contenido, de lo contrario se crearía un nuevo objeto en el modelo con los datos del input delformulario y con metodo redirect se redirecciona a la lista de proyectos
-
-? ESTÁTICOS Y CSS
-. en app creamos carpeta static para agregar imagenes, pdf, etc a archivo templete
-. en app en static creamos carpeta css y archivo css y agregamos estilos
-. en app en templete referenciamos con jinja load static/ static 'css/css.css' para agregar estilos al archivo html
-
-? URLS:
-. en app creamos archivo que aloja urls_app que ejecutan funciones importadas de views
-. en proyecto en archivo urls incluimos urls_app con módulo include.
-
--------------------------------
-
-? para despues:
-. Creamos modelo dentro de app, ventas(#venta, cliente, producto, cantidad_venta, precio_venta)
-. Creamos modelo dentro de app, productos(producto, sku, cantidad, precio)
-. Creamos modelo dentro de app, clientes(nombre, telefono, direccion)
-. migramos datos de modelos dentro de app a la base de datos
-
-"""
-
-""" 
-
-
 * NUEVO CONTEXTO PARA AGREGAR DICCIONARIOS EN UNA VARIABLE:
     context = {'form': forms.UniuversityForm }
         return render(request,'index.html',context)
